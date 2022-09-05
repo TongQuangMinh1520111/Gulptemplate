@@ -1,0 +1,106 @@
+/*------------------------------------------------------------
+btn
+------------------------------------------------------------*/
+
+/*
+------------------------------------------------------------*/
+.l-btn1{
+    margin-top: 4.5vw;
+    float: right;
+}
+.c-btn1{
+    display: inline-block;
+    border: 1px solid  #BEA000;
+    line-height: 3.7vw;
+    width: 11.04vw;
+    height: 3.7vw;
+    a{
+        display:inline-block;
+        font-size: 0.741vw;
+       padding-left: 1.344vw;
+       letter-spacing: 0.09;
+       font-family:'poppins-semibold';
+       color: #BEA000;
+       i{
+           font-size: 1.37vw;
+           padding-top: 1.23vw;
+           position: relative;
+       }
+       span{
+           display: inline-block;
+           margin-left: 2.688vw;
+       }
+       i:after{
+           content: '';
+           width:0.04vw;
+           height: 2.6vw;
+           background: #BEA000;
+           display: inline-block;
+          position: absolute;
+          right: -1.344vw;
+          top:0.55vw;
+
+       }
+    }
+    &--1{
+        background-color: #BEA000;
+        margin-left: 4.52vw;
+        a{
+            color: #000000;
+            i:after{
+                background: #000000;
+            }
+        }
+    }
+}
+
+.c-btn2{ 
+    height: 3.7vw;
+    width: 15.37vw;
+    background: #BEA000;
+    margin: 0 auto;
+    a{
+        display:inline-block;
+        font-size: 0.741vw;
+       padding-left: 2.37vw;
+       letter-spacing: 0.09;
+       font-family:'poppins-semibold';
+       i{
+           font-size: 1.37vw;
+           padding-top: 1.23vw;
+           position: relative;
+       }
+       span{
+           display: inline-block;
+           margin-left: 4.72vw;
+       }
+       i:after{
+         
+           content: '';
+           width:0.04vw;
+           height: 2.6vw;
+           background: #000000;
+           display: inline-block;
+          position: absolute;
+          right: -2.37vw;
+          top:0.55vw;
+
+       }
+    }
+  }
+
+  .c-btn3{ 
+    height: 3.7vw;
+    width: 15.37vw;
+    background: #BEA000;
+    margin: 0 auto;
+    a{
+        display: block;
+        font-size: 0.833vw;
+        color: #000000;
+        letter-spacing: 0.102vw;
+        line-height: 3.7vw;
+        font-family:'poppins-semibold';
+        text-align: center;
+    }
+  }
