@@ -21,32 +21,13 @@ function clean() {
     return del([buildDir+"/assets/"]);
 }
 
-//Compile scss to css
-function style(){
+//Css
+
+function style() {
     return gulp
-        //1. Where is my scss file
-        .src(devDir+'/assets/sass/**/*.scss')
-
-        //2. sourceMap scss
-        .pipe(sourcemaps.init())
-
-        //3. pass that file through sass compilier
-        .pipe(sass({outputStyle: 'expanded'}).on('error', sass.logError))
-
-        //4. auto prefix
-        .pipe(autoprefixer({
-            cascade: false
-        }))
-
-        //5. source map css
-        .pipe(sourcemaps.write('.'))
-
-        //6. Where do I save the compiled CSS?
-        .pipe(gulp.dest(buildDir+'/assets/css'))
-
-        //7. stream changes to all browser
-        .pipe(browserSync.stream());
-}
+      .src(devDir + "/assets/css/**/*.css")
+      .pipe(gulp.dest(buildDir + "/assets/css"));
+  }
 
 //JS
 function scripts(){

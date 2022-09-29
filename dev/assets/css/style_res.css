@@ -1,0 +1,203 @@
+.box_sp {
+    display: none;
+}
+
+.box_pc {
+    display: block;
+}
+
+/* responsive */
+@media screen and (max-width: 1500px) {}
+
+@media screen and (max-width: 1150px) {}
+
+@media screen and (min-width: 1025px) {}
+
+@media screen and (max-width: 1024px) {}
+
+@media screen and (max-width: 992px) {}
+
+@media screen and (max-width: 768px) {
+
+    #wrapper,
+    #header,
+    #main,
+    #footer,
+    .inner,
+    .pages .pages_inner {
+        width: 100% !important;
+        min-width: inherit !important;
+    }
+
+    .inner {
+        padding: 0 3%;
+    }
+
+    .box_sp {
+        display: block;
+    }
+
+    .box_pc {
+        display: none;
+    }
+
+    /* ========== */
+    .hamburger {
+        width: 40px;
+        height: 27px;
+        position: relative;
+        cursor: pointer;
+        display: inline-block;
+        z-index: 100;
+        margin-left: 40px;
+    }
+
+    .hamburger span {
+        background: #a4a4a4;
+        display: block;
+        position: absolute;
+        height: 3px;
+        transform: rotate(0deg);
+        transition: all .25s cubic-bezier(0.22, 0.61, 0.36, 1);
+        opacity: 1;
+        width: 100%;
+        left: 0;
+    }
+
+    .hamburger span:nth-child(1) {
+        top: 0px;
+    }
+
+    .hamburger span:nth-child(2) {
+        top: 12px;
+    }
+
+    .hamburger span:nth-child(3) {
+        top: 24px;
+    }
+
+    .hamburger.active span:nth-child(1) {
+        top: 12px;
+        transform: rotate(135deg);
+    }
+
+    .hamburger.active span:nth-child(2) {
+        opacity: 0;
+        left: -60px;
+    }
+
+    .hamburger.active span:nth-child(3) {
+        top: 12px;
+        transform: rotate(-135deg);
+    }
+
+    /* ========== */
+
+    #header .menu {
+        display: block;
+        width: auto;
+    }
+
+    #header #gnavi {
+        z-index: 9999;
+        position: fixed;
+        height: calc(100vh - 70px);
+        top: 70px;
+        right: -100%;
+        background: #fff;
+        width: 100%;
+        border-top: 1px solid #ffd3d8;
+        overflow: auto;
+        flex-direction: column;
+        justify-content: flex-start;
+        transition: transform 1s;
+        padding: 0 0 75px;
+    }
+
+    #header #gnavi > li {
+        display: block;
+        transition: all 0.3s;
+        width: 100%;
+        margin: 0 0;
+        padding: 0;
+        height: auto;
+        flex: none;
+    }
+
+    #header #gnavi li a,
+    #header #gnavi li span.btn_sub {
+        font-size: 16px;
+        line-height: 1.4;
+        text-decoration: none;
+        padding: 0 .5em 0 .7em;
+        height: 55px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        position: relative;
+        text-align: left;
+        box-sizing: border-box;
+        border-bottom: 1px solid #ffd3d8;
+    }
+
+    #header #gnavi li span.btn_sub {
+        color: #fff;
+        background: #e06277;
+    }
+
+    #header #gnavi .sub_menu {
+        background: #fffbfb;
+        padding: 0 0;
+        border-bottom: 1px solid #ffd3d8;
+    }
+
+    #header #gnavi .sub_menu ul {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding: 0 0;
+    }
+
+    #header #gnavi .sub_menu li {
+        width: 50%;
+        border-bottom: 1px solid #ffd3d8;
+        margin: 0 0;
+    }
+
+    #header #gnavi .sub_menu li:nth-child(odd) {
+        border-right: 1px solid #ffd3d8;
+    }
+
+    #header #gnavi .sub_menu li:last-child {
+        border-bottom: 0;
+    }
+
+    #header #gnavi .sub_menu li a {
+        white-space: inherit;
+        font-size: 15px;
+        line-height: 1.4;
+        height: 45px;
+        background: #fffbfb;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        text-align: left;
+        padding: 0 1.3em 0 .7em;
+        border-bottom: 0;
+        color: #333;
+    }
+
+    #header #gnavi.active {
+        transform: translateX(-100%);
+    }
+}
+
+@media screen and (max-width: 576px) {}
+
+@media screen and (max-width: 490px) {}
+
+@media screen and (max-width: 390px) {}
+
+@media screen and (max-width: 320px) {}
